@@ -1,0 +1,20 @@
+{
+  "name": "docker-node-playground",
+  "version": "1.0.0",
+  "description": "playing around with docker and node",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/roylines/docker-node-playground.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roylines/docker-node-playground/issues"
+  },
+  "homepage": "https://github.com/roylines/docker-node-playground"
+}
