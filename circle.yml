@@ -3,7 +3,7 @@ machine:
     - docker
   
   environment:
-    IMAGE: $CIRCLE_PROJECT_USERNAME/CIRCLE_PROJECT_REPONAME:$CIRCLE_BUILD_NUM
+    IMAGE: $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME:$CIRCLE_BUILD_NUM
 
 dependencies:
   override:
@@ -12,6 +12,7 @@ dependencies:
 
 test:
   override:
+    - echo "buiding $IMAGE"
     - "docker run --rm -d -p 5000: $IMAGE --name dnp"
     - curl --retry 10 --retry-delay 5 -v http://localhost:5000
     - docker stop dnp
